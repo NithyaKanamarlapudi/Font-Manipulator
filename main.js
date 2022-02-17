@@ -18,10 +18,6 @@ function modelLoaded(){
     console.log('PoseNet Is Initialized');
 }
 
-function draw(){
-
-}
-
 function gotPoses(results){
     if(results.length > 0)
     {
@@ -32,4 +28,12 @@ function gotPoses(results){
         rightwristX= results[0].pose.rightWrist.x;
         difference=floor(leftwristX-rightwristX);
     }
+}
+
+function draw(){
+    background('#e7d1ff');
+    textsize('text', noseX, noseY);
+    fill('#dff7f3');
+    stroke('#dff7f3');
+    document.getElementById("square_side").innerHTML=difference;
 }
