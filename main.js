@@ -32,8 +32,8 @@ function gotPoses(results){
 
 function draw(){
     background('#e7d1ff');
-    textsize('text', noseX, noseY);
+    textSize(difference);
     fill('#dff7f3');
-    stroke('#dff7f3');
-    document.getElementById("square_side").innerHTML=difference;
+    text('Nithya', noseX, noseY)
+    document.getElementById("font_size").innerHTML=difference;
 }
